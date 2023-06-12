@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Regular.ttf");
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #666666;
+}
+
+h1,
+h2 {
+  /* User Agent Stylesheet in EDGE adds a top margin to H1,H2 etcetera. */
+  margin: 0;
+}
+
+.ParallaxImg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Auto Layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Fixed = Parallax | Scroll = Normal */
+  background-attachment: fixed;
+}
+
+#ParallaxImg1 {
+  background-image: url(../images/CoffeeBeans.webp);
+  min-height: 100%;
+}
+
+#ParallaxImg2 {
+  background-image: url(../images/CofeeFilter.webp);
+  min-height: 40%;
+}
+
+#ParallaxImg3 {
+  background-image: url(../images/CoffeeFlower.webp);
+  min-height: 40%;
+}
+
+#ParallaxImg4 {
+  background-image: url(../images/CoffeeSign.webp);
+  min-height: 100%;
+}
+
+.ParallaxText {
+  background-color: #111111;
+  color: #ffeeee;
+  padding: 20px;
+}
+
+.section {
+  /* Auto Layout */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  text-shadow: 1px 1px 1px rgba(165, 40, 40, 0.4);
+  padding: 25px 5%;
+}
+
+.section-light {
+  background-color: #fff1e0;
+}
+
+.section-dark {
+  background-color: #ffeebb;
+}
+
+.BrandIcons {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Logo {
+  width: 80px;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .ParallaxImg {
+    background-attachment: scroll;
+    min-height: 200px;
+  }
+  .section,
+  .ParallaxText {
+    padding: 8px 16px;
+  }
+  .section {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .BrandIcons {
+    flex-direction: row;
+  }
+  h1 {
+    font-size: 1.25rem;
+  }
+}
